@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <TargetFrameworks>net6.0;net7.0</TargetFrameworks>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageId>FSharp.Collections.Builders</PackageId>
+    <Version>0.1.0</Version>
+    <Authors>Brian Rourke Boll</Authors>
+    <Description>Computation expressions for conveniently and efficiently constructing common collections.</Description>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/brianrourkeboll/FSharp.Collections.Builders</RepositoryUrl>
+    <PackageProjectUrl>https://brianrourkeboll.github.io/FSharp.Collections.Builders/</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageTags>F#;fsharp;collections</PackageTags>
+    <PackageIcon>logo.png</PackageIcon>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <Copyright>© 2023 Brian Rourke Boll</Copyright>
+    <!-- FS3390: XML documentation validation -->
+    <!-- FS1182: Unused values -->
+    <WarnOn>$(WarnOn);3390;1182</WarnOn>
+    <NoWarn>$(NoWarn);1204</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\LICENSE.md" />
+    <None Include="..\README.md" />
+    <Compile Include="CollectionBuilders.fs" />
+  </ItemGroup>
+
+  <ItemGroup />
+
+</Project>

@@ -1,0 +1,35 @@
+body {
+    font-family: 'Segoe UI', -apple-system, sans-serif, 'Segoe UI Emoji', 'Apple Color Emoji';
+}
+
+#fsdocs-content h1 code,
+#fsdocs-content h2 code,
+#fsdocs-content h3 code {
+    font-weight: 300;
+    font-size: unset;
+}
+
+h4 {
+    font-size: unset;
+}
+
+#fsdocs-content p,
+#fsdocs-content li {
+    font-weight: normal;
+}
+
+pre,
+code,
+.fsdocs-param-name,
+.fsdocs-return-name,
+.fsdocs-param,
+.fsdocs-tip,
+.fssnip,
+div.fsdocs-tip,
+div.fsdocs-tip code,
+#fsdocs-content code,
+#fsdocs-content pre,
+#fsdocs-content pre.fssnip code {
+    font-family: 'Cascadia Code', Consolas, monospace;
+    font-feature-settings: 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'zero', 'onum', 'calt';
+}
