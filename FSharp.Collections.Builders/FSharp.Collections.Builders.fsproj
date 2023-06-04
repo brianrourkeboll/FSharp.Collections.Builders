@@ -13,7 +13,7 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageTags>F#;fsharp;collections</PackageTags>
-    <PackageIcon>logo.png</PackageIcon>
+    <PackageIcon>..\logo.png</PackageIcon>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <Copyright>© 2023 Brian Rourke Boll</Copyright>
