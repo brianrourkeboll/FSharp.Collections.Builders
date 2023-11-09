@@ -10,6 +10,12 @@ Get it on NuGet: [FSharp.Collections.Builders](https://www.nuget.org/packages/FS
 dotnet add package FSharp.Collections.Builders
 ```
 
+Or try it in a script file:
+
+```fsx
+#r "nuget: FSharp.Collections.Builders, 0.1.0-beta.2"
+```
+
 ## API documentation
 
 See the [API documentation](https://brianrourkeboll.github.io/FSharp.Collections.Builders/reference/index.html)
