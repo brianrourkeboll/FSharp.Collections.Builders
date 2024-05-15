@@ -172,7 +172,7 @@ let m = map { for x in 1..100 -> x, x * x }
 > Equivalent to
 >
 > ```fsharp
-> let m = Map.ofSeq {1..100}
+> let m = Map.ofSeq (seq { for x in 1..100 -> x, x * x })
 > ```
 >
 > or
