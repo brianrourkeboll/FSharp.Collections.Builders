@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net6.0;net7.0</TargetFrameworks>
+    <TargetFrameworks>net6.0;net8.0</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <PackageId>FSharp.Collections.Builders</PackageId>
     <Version>0.1.0-beta.2</Version>
@@ -16,7 +16,7 @@
     <PackageIcon>logo.png</PackageIcon>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-    <Copyright>© 2023 Brian Rourke Boll</Copyright>
+    <Copyright>© 2024 Brian Rourke Boll</Copyright>
     <!-- FS3390: XML documentation validation -->
     <!-- FS1182: Unused values -->
     <WarnOn>$(WarnOn);3390;1182</WarnOn>
@@ -47,8 +47,8 @@
     <PackageReference Update="FSharp.Core" Version="6.0.0" />
   </ItemGroup>
 
-  <ItemGroup Condition="'$(TargetFramework)' == 'net7.0'">
-    <PackageReference Update="FSharp.Core" Version="7.0.0" />
+  <ItemGroup Condition="'$(TargetFramework)' == 'net8.0'">
+    <PackageReference Update="FSharp.Core" Version="8.0.100" />
   </ItemGroup>
 
 </Project>

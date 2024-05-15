@@ -29,7 +29,7 @@ list, array, and sequence expressions, including `for`, `while`, `yield!`, `try`
 ### `FSharp.Collections.Builders`
 
 Open `FSharp.Collections.Builders` for type-inference-friendly builders that behave similarly to the built-in list,
-array, and sequence expressions in that they treat any collection used with `for` or `yield!` as a `seq<_>`.
+array, and sequence expressions in that they treat any collection used with `for` or `yield!` as a `_ seq`.
 
 ```fsharp
 open FSharp.Collections.Builders
@@ -70,13 +70,13 @@ let ys = resizeArray { for x in xs -> float x * 2.0 }
 let f xs = resizeArray { for x in xs do if x % 3 = 0 then x }
 ```
 
-> `xs` is `seq<int>`.
+> `xs` is `int seq`.
 
 ```fsharp
 let g xs = resizeArray<float> { for x in xs -> x * x }
 ```
 
-> `xs` is `seq<float>`.
+> `xs` is `float seq`.
 
 ### `hashSet`
 
@@ -178,7 +178,7 @@ let m = map { for x in 1..100 -> x, x * x }
 > or
 >
 > ```fsharp
-> let m = (Map.empty, {1..100}) ||> Map.fold (fun m x -> m.Add (x, x * x))
+> let m = (Map.empty, {1..100}) ||> Seq.fold (fun m x -> m.Add (x, x * x))
 > ```
 
 ## Immutable collections from `System.Collections.Immutable`
@@ -269,7 +269,7 @@ let s =
 let s = sum { for x in xs do if x % 3 = 0 then x }
 ```
 
-The Greek capital letter sigma `Σ` (easily enterable via <kbd>⊞ Win</kbd> + <kbd>.</kbd> on Windows) may read better in certain domains:
+The Greek capital letter sigma `Σ` may read better in certain domains:
 
 ```fsharp
 Σ { for item in items -> item.Subtotal } <= 0.10 * total
@@ -308,7 +308,7 @@ let g xs =
 F#'s built-in [list](https://learn.microsoft.com/en-us/dotnet/fsharp/language-reference/lists#creating-and-initializing-lists),
 [array](https://learn.microsoft.com/en-us/dotnet/fsharp/language-reference/arrays#create-arrays),
 and [sequence](https://learn.microsoft.com/en-us/dotnet/fsharp/language-reference/sequences#sequence-expressions) expressions
-make initializing and transforming `'T list`, `'T array`, and `seq<'T>` quite nice:
+make initializing and transforming `'T list`, `'T array`, and `'T seq` quite nice:
 
 #### List literal
 
@@ -353,7 +353,7 @@ Or, to keep the ergonomics of sequence expressions, you must instantiate and ite
 let nums = ResizeArray [1; 2; 3]
 ```
 
-#### Instantiates and iterates over an intermediate `seq<int>`
+#### Instantiates and iterates over an intermediate `int seq`
 
 ```fsharp
 let nums = ResizeArray (seq { 1; 2; 3 })
