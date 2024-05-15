@@ -10,10 +10,12 @@ Get it on NuGet: [FSharp.Collections.Builders](https://www.nuget.org/packages/FS
 dotnet add package FSharp.Collections.Builders
 ```
 
-Or try it in a script file:
+Or try it in an F# script file (`.fsx`):
 
 ```fsx
-#r "nuget: FSharp.Collections.Builders, 0.1.0-beta.2"
+#r "nuget: FSharp.Collections.Builders"
+
+open FSharp.Collections.Builders
 ```
 
 ## API documentation
@@ -33,6 +35,17 @@ array, and sequence expressions in that they treat any collection used with `for
 
 ```fsharp
 open FSharp.Collections.Builders
+```
+
+The builders in this namespace don't require any type annotations in situations like this:
+
+```fsharp
+// No need to add a type annotation to xs;
+// xs is inferred to have type 'a seq.
+let f xs =
+    resizeArray {
+        for x in xs -> string x
+    }
 ```
 
 ## Mutable collections from `System.Collections.Generic`

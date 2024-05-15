@@ -4,7 +4,7 @@
     <TargetFrameworks>net6.0;net8.0</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <PackageId>FSharp.Collections.Builders</PackageId>
-    <Version>0.1.0-beta.2</Version>
+    <Version>1.0.0</Version>
     <Authors>Brian Rourke Boll</Authors>
     <Description>Computation expressions for conveniently and efficiently constructing common collections.</Description>
     <RepositoryType>git</RepositoryType>
@@ -40,7 +40,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" />
   </ItemGroup>
 
   <ItemGroup Condition="'$(TargetFramework)' == 'net6.0'">
