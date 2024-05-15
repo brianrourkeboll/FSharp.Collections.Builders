@@ -8,7 +8,7 @@ open System.Collections.Immutable
 
 /// <namespacedoc>
 /// <summary>
-/// Contains computation expression builders for conviently and efficiently constructing common collections.
+/// Contains computation expression builders for conveniently and efficiently constructing common collections.
 /// </summary>
 /// </namespacedoc>
 ///
